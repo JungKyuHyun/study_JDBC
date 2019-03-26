@@ -58,10 +58,17 @@ public class Ex03_Oracle_DML {
 //			String sql = "insert into dmlemp(empno,ename,deptno)";
 //            sql+="values("+empno+",'"+ename+"',"+deptno+")";
 			
-			String sql = "update dmlemp set sal=0  where deptno=" +deptno;
+			
+			//UPDATE
+			//update dmlemp set sal=0 where deptno=부서번호;
+//			String sql = "update dmlemp set sal=0  where deptno=" +deptno;
             
 			//실제) parameter
 			//values(?,?,?);
+			//delete
+			//delete from dmlemp where deptno=부서번호
+			String sql = "delete from dmlemp where deptno=" +deptno;
+			
 			
 			int resultrowcount = stmt.executeUpdate(sql);
 			if(resultrowcount >0) {
@@ -70,10 +77,9 @@ public class Ex03_Oracle_DML {
 				//예외가 아니고 ... 반영된 행이 없다. 
 				System.out.println("Insert Fail :" + resultrowcount);
 			}
-			//UPDATE
-			//update dmlemp set sal=0 where deptno=부서번호;
+
 			
-			
+	
 		}catch(Exception e) {
 			System.out.println("SQL 예외발생 : " + e.getMessage());
 		}finally {
