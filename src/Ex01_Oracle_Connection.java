@@ -60,13 +60,15 @@ public class Ex01_Oracle_Connection {
 		String sql = "select empno, ename, sal from emp";
 		ResultSet rs = stmt.executeQuery(sql); //실행결과를 반환 받기
 		
+		//처리(화면처리)
 		while(rs.next()) {
-			System.out.println(rs.getInt("empno") + "/" +
+			System.out.println(rs.getInt("empno") + "/" + //인덱스로 접근해도 됨 
 								rs.getString("ename") + "/" +
 								rs.getInt("sal"));
 																				
 		}
 		
+		stmt.close();
 		rs.close();
 		conn.close();
 		System.out.println("DB연결 : " + conn.isClosed());
