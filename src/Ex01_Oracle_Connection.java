@@ -51,7 +51,7 @@ public class Ex01_Oracle_Connection {
 		System.out.println("오라클 드라이버 로딩");
 		
 		//getConnection Connection 구현한 객체의 주소값을 리턴
-		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","bituser","1004");
+		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","hr","1004");
 		System.out.println(conn.isClosed() + "정상(FALSE)");
 		
 		Statement stmt = conn.createStatement(); //명령 객체 얻어오기 
