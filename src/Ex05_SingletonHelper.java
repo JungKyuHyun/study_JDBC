@@ -1,7 +1,6 @@
 import java.sql.Connection;
 import java.sql.SQLException;
 
-import kr.or.bit.utils.ConnectionHelper;
 import kr.or.bit.utils.SingletonHelper;
 
 public class Ex05_SingletonHelper {
